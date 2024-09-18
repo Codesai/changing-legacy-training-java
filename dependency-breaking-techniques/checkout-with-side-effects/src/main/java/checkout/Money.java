@@ -1,9 +1,11 @@
 package checkout;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Objects;
 
 public class Money {
+
     public static Money oneThousand() {
         return new Money(aValueOf(1000));
     }
@@ -24,7 +26,7 @@ public class Money {
 
     public Money percentage(double percentage) {
         BigDecimal newValue = value.multiply(aValueOf(percentage)).divide(aValueOf(100));
-        return new Money(newValue);
+        return new Money(newValue.setScale(2, RoundingMode.HALF_EVEN));
     }
 
     public Money add(Money amount) {
@@ -48,7 +50,7 @@ public class Money {
     }
 
     private static BigDecimal aValueOf(double amount) {
-        return new BigDecimal(amount);
+        return new BigDecimal(amount).setScale(2, RoundingMode.HALF_EVEN);
     }
 
     @Override
