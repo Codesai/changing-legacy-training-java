@@ -142,7 +142,6 @@ public class Portfolio {
     protected List<String> readAssetsFileLines() {
         final Path path = Paths.get(portfolioCsvPath);
         try {
-            System.out.println(path.toAbsolutePath());
             return Files.readAllLines(path);
         } catch (IOException e) {
             throw new UncheckedIOException(e);
