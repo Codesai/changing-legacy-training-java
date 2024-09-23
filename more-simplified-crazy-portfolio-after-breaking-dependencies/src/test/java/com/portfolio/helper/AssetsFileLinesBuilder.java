@@ -5,38 +5,32 @@ public class AssetsFileLinesBuilder {
     private String _description;
     private String _valueAsString;
 
-    private AssetsFileLinesBuilder()
-    {
+    private AssetsFileLinesBuilder() {
         _dateAsString = "";
         _description = "description";
         _valueAsString = "";
     }
 
-    public static AssetsFileLinesBuilder anAsset()
-    {
+    public static AssetsFileLinesBuilder anAsset() {
         return new AssetsFileLinesBuilder();
     }
 
-    public AssetsFileLinesBuilder fromDate(String date)
-    {
+    public AssetsFileLinesBuilder fromDate(String date) {
         _dateAsString = date;
         return this;
     }
 
-    public AssetsFileLinesBuilder describedAs(String description)
-    {
+    public AssetsFileLinesBuilder describedAs(String description) {
         _description = description;
         return this;
     }
 
-    public AssetsFileLinesBuilder withValue(int value)
-    {
+    public AssetsFileLinesBuilder withValue(int value) {
         _valueAsString = String.valueOf(value);
         return this;
     }
 
-    public String build()
-    {
+    public String build() {
         return String.format("%s,%s,%s", _description, _dateAsString, _valueAsString);
     }
 }

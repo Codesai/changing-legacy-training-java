@@ -8,7 +8,7 @@ public abstract class Value {
         this.value = value;
     }
 
-    public int get(){
+    public int get() {
         return value;
     }
 }

@@ -43,7 +43,7 @@ public class TestingPortfolio extends Portfolio {
         return parseDate(dateAsString);
     }
 
-    private Date parseDate(String dateAsString)  {
+    private Date parseDate(String dateAsString) {
         final SimpleDateFormat formatter = new SimpleDateFormat("yyyy/M/dd", Locale.ROOT);
         try {
             return formatter.parse(dateAsString);
