@@ -44,7 +44,7 @@ public class TestingPortfolio extends Portfolio {
     }
 
     private Date parseDate(String dateAsString) {
-        final SimpleDateFormat formatter = new SimpleDateFormat("yyyy/M/dd", Locale.ROOT);
+        final SimpleDateFormat formatter = new SimpleDateFormat("yyyy/M/dd", new Locale("en", "US"));
         try {
             return formatter.parse(dateAsString);
         } catch (ParseException e) {
