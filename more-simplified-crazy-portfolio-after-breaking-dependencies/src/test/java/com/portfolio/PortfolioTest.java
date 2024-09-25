@@ -18,6 +18,6 @@ public class PortfolioTest {
 
         portfolio.computePortfolioValue();
 
-        assertEquals(portfolio.messages.get(0), "98");
+        assertEquals("98", portfolio.messages.get(0));
     }
 }
