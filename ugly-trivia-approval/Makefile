@@ -6,3 +6,9 @@ mutant-tests: ## run mutation tests
 
 mutant-report: ## show mutation tests report
 	firefox target/pit-reports/
+
+coverage: ## run coverage tests 
+	mvn clean test jacoco:report
+
+coverage-report: ## show coverage tests report
+	firefox target/site/jacoco/index.html
