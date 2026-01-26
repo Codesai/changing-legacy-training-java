@@ -4,8 +4,7 @@ import problematic_discount.Discount;
 import problematic_discount.Money;
 import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class DiscountTest {
 
@@ -16,7 +15,7 @@ public class DiscountTest {
 
         var total = discount.discountFor(net);
 
-        assertThat(total, is(Money.amount(85.0)));
+        assertThat(total).isEqualTo(Money.amount(85.0));
     }
 }
 

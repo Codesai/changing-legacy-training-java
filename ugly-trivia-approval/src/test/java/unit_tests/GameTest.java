@@ -7,8 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class GameTest {
     @Test
@@ -22,7 +21,7 @@ public class GameTest {
 
         game.run();
 
-        assertThat(game.messagesShown, is(getExpectedMessagesForSimulation1()));
+        assertThat(game.messagesShown).isEqualTo(getExpectedMessagesForSimulation1());
     }
 
     @Test
@@ -38,7 +37,7 @@ public class GameTest {
 
         game.run();
 
-        assertThat(game.messagesShown, is(getExpectedMessagesForSimulation2()));
+        assertThat(game.messagesShown).isEqualTo(getExpectedMessagesForSimulation2());
     }
 
     private List<String> getExpectedMessagesForSimulation1() {

@@ -2,13 +2,12 @@ package com.portfolio;
 
 import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.*;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class PortfolioTest {
 
     @Test
     public void canary_test() {
-        assertThat(true, is(true));
+        assertThat(true).isEqualTo(true);
     }
 }

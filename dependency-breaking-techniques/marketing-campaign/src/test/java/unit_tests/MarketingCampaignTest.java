@@ -3,8 +3,7 @@ package unit_tests;
 import marketing_campaign.MarketingCampaign;
 import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class MarketingCampaignTest {
     @Test
@@ -14,7 +13,7 @@ public class MarketingCampaignTest {
 
         var isCrazySalesDay = campaign.isCrazySalesDay();
 
-        assertThat(isCrazySalesDay, is(true));
+        assertThat(isCrazySalesDay).isEqualTo(true);
     }
 
     @Test
@@ -24,7 +23,7 @@ public class MarketingCampaignTest {
 
         var isActive = campaign.isActive();
 
-        assertThat(isActive, is(true));
+        assertThat(isActive).isEqualTo(true);
     }
 }
 

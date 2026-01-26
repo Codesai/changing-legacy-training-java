@@ -4,8 +4,7 @@ import checkout.Checkout;
 import checkout.Money;
 import org.junit.jupiter.api.Test;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class CheckoutTest {
     @Test
@@ -14,7 +13,7 @@ public class CheckoutTest {
 
         checkout.createReceipt(Money.amount(12));
 
-        assertThat(true, is(false));
+        assertThat(true).isEqualTo(false);
     }
 }
 

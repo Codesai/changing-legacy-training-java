@@ -3,8 +3,7 @@ package unit_tests;
 import org.junit.jupiter.api.Test;
 import problematic_searcher.PeopleSearcher;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.is;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class PeopleSearcherTest {
     @Test
@@ -14,7 +13,7 @@ public class PeopleSearcherTest {
 
         var persons = peopleSearcher.search("Pedro");
 
-        assertThat(persons.size(), is(2));
+        assertThat(persons.size()).isEqualTo(2);
     }
 }
 
